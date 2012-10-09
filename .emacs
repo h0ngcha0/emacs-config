@@ -8,11 +8,11 @@
 (add-to-list 'load-path "~/.emacs.d")
 
 ;; enable/disable the tool/menu bar
-(tool-bar-mode 0)
-(menu-bar-mode 1)
+;; (tool-bar-mode 0)
+(menu-bar-mode 0)
 
 ;; disable the scroll bar, too big
-(scroll-bar-mode 0)
+;; (scroll-bar-mode 0)
 (set-face-attribute 'default nil :height 150)
 (put 'scroll-left 'disabled nil)
 
@@ -47,7 +47,8 @@
 (setq dired-recursive-deletes (quote top))
 
 ;; load solarized theme
-(add-to-list 'custom-theme-load-path "~/emacs-config/solarized-emacs/")
+(add-to-list 'load-path "~/emacs-config/lib/solarized-emacs/")
+(add-to-list 'custom-theme-load-path "~/emacs-config/lib/solarized-emacs/")
 (load-theme 'solarized-dark t)
 
 ;; enable the global linum mode
@@ -112,15 +113,15 @@
 (setq indent-line-function 'insert-tab)
 
 ;; load nyan mode
-(add-to-list 'load-path "~/emacs-config/nyan-mode/")
-(require 'nyan-mode)
+(add-to-list 'load-path "~/emacs-config/lib/nyan-mode/")
+;; (require 'nyan-mode)
 
 ;; erlang mode setup
 ;; NOTE: use the proper OTP path
-;;(setq load-path (cons "~/git/xxx/OTP/otp/lib/tools/emacs/" load-path))
-;;(setq erlang-root-dir "~/git/xxx/OTP/otp/")
-;;(setq exec-path (cons "~/git/xxx/OTP/otp/" exec-path))
-;;(require 'erlang-start)
+(setq load-path (cons "~/git/otp/lib/tools/emacs/" load-path))
+(setq erlang-root-dir "~/git/otp/")
+(setq exec-path (cons "~/git/otp/" exec-path))
+(require 'erlang-start)
 
 ;; Some erlang mode customizations
 (add-hook 'erlang-mode-hook
@@ -134,7 +135,7 @@
 (add-hook 'erlang-mode-hook 'linum-mode)
 
 ;; edts
-(add-to-list 'load-path "~/emacs_config/lib/edts/")
+(add-to-list 'load-path "~/emacs-config/lib/edts/")
 (require 'edts-start)
 
 (setq edts-projects
