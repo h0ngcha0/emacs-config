@@ -1,0 +1,12 @@
+[submodule "lib/edts"]
+	path = lib/edts
+	url = git://github.com/tjarvstrand/edts.git
+[submodule "lib/nyan-mode"]
+	path = lib/nyan-mode
+	url = git://github.com/TeMPOraL/nyan-mode.git
+[submodule "lib/solarized-emacs"]
+	path = lib/solarized-emacs
+	url = git://github.com/bbatsov/solarized-emacs.git
+[submodule "lib/magit"]
+	path = lib/magit
+	url = git://github.com/magit/magit.git
